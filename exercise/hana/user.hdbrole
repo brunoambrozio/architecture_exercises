@@ -1,0 +1,7 @@
+role com.exercise.hana::user
+{
+    catalog schema "USERSCHEMA": CREATE ANY, DROP, INDEX, SELECT, INSERT, UPDATE, DELETE;
+
+ 
+    application privilege: "com.exercise.hana::Execute";
+}

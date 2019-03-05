@@ -1,0 +1,12 @@
+description = "SFSF Gateway";
+host = "apisalesdemo4.successfactors.com";
+port = 443;
+pathPrefix = "/odata/v2";
+proxyType = none;
+proxyHost = "";
+proxyPort = 0;
+authType = basic;
+useSSL = true;
+timeout = 0;
+sslHostCheck = true;
+sslAuth = anonymous;
