@@ -1,0 +1,51 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.exercise.user.EX_USER_UI5_TO_SAP.controller.UserList" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				    <Table noDataText="Drop column list items here and columns in the area above" items="{path:'model_userset>/results'}">
+				        <items>
+				            <ColumnListItem type="Active" id="item1">
+				                <cells>
+				                    <Text text="{model_userset>Usrid}" id="text5"/>
+				                    <Text text="{model_userset>Firstname}" id="text6"/>
+				                    <Text text="{model_userset>Lastname}" id="text7"/>
+				                    <Text text="{= ${model_userset>Gender} === '1' ? 'Male' : ${model_userset>Gender} === '2' ? 'Female' : '' }" id="text8"/>
+				                    <Button xmlns="sap.m" id="button0_1549503834509" icon="sap-icon://write-new-document" press="onUpdatePopup"/>
+				                    <Button xmlns="sap.m" id="button1" icon="sap-icon://delete" press="onDeletePopup"/>
+				                </cells>
+				            </ColumnListItem>
+				        </items>
+				        <columns>
+				            <Column id="column3">
+				                <header>
+				                    <Label text="User Id" id="label3"/>
+				                </header>
+				            </Column>
+				            <Column id="column4">
+				                <header>
+				                    <Label text="First Name" id="label4"/>
+				                </header>
+				            </Column>
+				            <Column id="column5">
+				                <header>
+				                    <Label text="Last Name" id="label5"/>
+				                </header>
+				            </Column>
+				            <Column id="column0">
+				                <header>
+				                    <Text text="Gender" id="text0"/>
+				                </header>
+				            </Column>
+				            <Column id="column0_1549503754563">
+				            </Column>
+				            <Column id="column1">
+				            </Column></columns></Table>
+				</content>
+			<headerContent>
+			    <Button xmlns="sap.m" text="Create" id="button0" icon="sap-icon://add" type="Emphasized" press="onCreatePopup"/>
+			</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
